@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import '../assets/style/Variable.scss';
 import 'assets/style/Footers.scss';
+import 'assets/style/Responsive.scss';
 
 const FooterApp = () => {
     return (

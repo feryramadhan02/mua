@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Button, Modal } from "antd";
+import { Link, useHistory } from 'react-router-dom';
+import { Button, Modal, Menu, Dropdown } from "antd";
 import ModalRegister from './ModalRegister';
 import ModalAddProduct from './ModalAddProduct';
+import { ExclamationCircleOutlined, BarsOutlined } from '@ant-design/icons';
 
 import '../assets/style/Headers.scss';
 import '../assets/style/Variable.scss';
@@ -10,8 +11,11 @@ import '../assets/style/Variable.scss';
 const HeaderApp = (props) => {
     const [isVisible, setIsVisible] = useState(false)
     const [isVisiblePost, setIsVisiblePost] = useState(false)
+    const history = useHistory()
     const [nav, setNav] = useState(false)
+    const { confirm } = Modal
     const toWhatsapp = "https://wa.me/085731879004"
+    const toAbout = "https://mbeauty2018.000webhostapp.com/"
 
     const showModal = () => {
         setIsVisible(true)
@@ -36,6 +40,48 @@ const HeaderApp = (props) => {
         setIsVisiblePost(value)
     }
 
+    const showConfirm = () => {
+        confirm({
+            title: 'Apakah anda yakin?',
+            icon: <ExclamationCircleOutlined />,
+            content: '',
+            async onOk() {
+                history.replace("/")
+            },
+            onCancel() {
+                console.log('Cancel')
+            },
+        })
+    }
+
+    const menu = () => {
+        if (nav !== true) {
+            return <Menu>
+                <Menu.Item key="0">
+                    <a href={toAbout}>About</a>
+                </Menu.Item>
+                <Menu.Item key="1">
+                    <a href={toWhatsapp}>Contact</a>
+                </Menu.Item>
+                <Menu.Item key="2">
+                    <Link to="#">Login</Link>
+                </Menu.Item>
+                <Menu.Item key="3" onClick={() => showModal()}>
+                    Register
+                </Menu.Item>
+            </Menu>
+        } else {
+            return <Menu>
+                <Menu.Item key="0" onClick={() => showModalPost()}>
+                    Post Product
+                </Menu.Item>
+                <Menu.Item key="1" onClick={showConfirm}>
+                    Logout
+                </Menu.Item>
+            </Menu>
+        }
+    }
+
 
     return (
         <>
@@ -54,7 +100,7 @@ const HeaderApp = (props) => {
                                     <Button className="regis" onClick={() => showModalPost()}>Post Product</Button>
                                 </li>
                                 <li>
-                                    <Button className="regis" onClick={() => console.log('')}>Logout</Button>
+                                    <Button className="regis" onClick={showConfirm}>Logout</Button>
                                 </li>
                             </ul>
                         </nav>
@@ -62,13 +108,13 @@ const HeaderApp = (props) => {
                         <nav className="nav-menu">
                             <ul className="main-menu">
                                 <li>
-                                    <Link to="/profile">About</Link>
+                                    <a href={toAbout}>About</a>
                                 </li>
                                 <li>
                                     <a href={toWhatsapp}>Contact</a>
                                 </li>
                                 <li>
-                                    <Link to="/profile">Login</Link>
+                                    <Link to="#">Login</Link>
                                 </li>
                                 <li>
                                     <Button className="regis" onClick={() => showModal()}>Register</Button>
@@ -76,6 +122,11 @@ const HeaderApp = (props) => {
                             </ul>
                         </nav>
                     }
+                    <Dropdown className="dropdowns" overlay={menu} trigger={['click']}>
+                        <h1 style={{ margin: '0', color: '#fff' }}>
+                            <BarsOutlined />
+                        </h1>
+                    </Dropdown>
                 </div>
             </header>
             <Modal

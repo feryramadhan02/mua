@@ -3,6 +3,7 @@ import CardProduct from "components/CardProduct";
 
 import 'assets/style/Home.scss';
 import 'assets/style/Variable.scss';
+import 'assets/style/Responsive.scss';
 
 const HomePage = (props) => {
     const { Search } = Input;

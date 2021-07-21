@@ -1,0 +1,86 @@
+
+@media all and (max-width: 400px) {
+    .disp {
+        .header-title {
+            h2 {
+                font-size: 18px !important;
+                span {
+                font-size: 15px !important;
+                }
+            }
+        }
+        .nav-menu {
+            width: 35% !important;
+            .main-menu {
+                display: none !important;
+            }
+        }
+        .dropdowns {
+            display: inline-block !important;
+            svg {
+                width: 20px;
+                line-height: 10px;
+            }
+        }
+    }
+    .top-carousell {
+        .carousell-img {
+            img {
+                height: 43em !important;
+            }
+        }
+        .overlay {
+            margin-top: -43em !important;
+            height: 43em !important;
+            .title {
+                .name {
+                    font-size: 32px !important;
+                }
+            }
+        }
+    }
+    .product {
+        .head-product {
+            padding-top: 10px !important;
+            display: inline-block !important;
+            .searching {
+                width: 100% !important;
+            }
+        }
+        .card-wrapper {
+            .card {
+                width: 335px;
+            }
+        }
+    }
+    .promo-title {
+        .base-promo {
+            .btn-join {
+                margin: auto !important;
+            }
+        }
+    }
+    footer {
+        .main-footer {
+            .footer-description {
+                padding: 15px !important;
+                .list-options {
+                    .options, li {
+                        font-size: 13px;
+                    }
+                }
+            }
+            .footer-social-media {
+                padding: 15px !important;
+                .title-sosmed {
+                    font-size: 13px;
+                }
+            }
+        }
+        .copyright-footer {
+            p {
+                font-size: 11px;
+            }
+        }
+    }
+}

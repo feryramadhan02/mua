@@ -51,5 +51,14 @@ header {
                 }
             }
         }
+        .dropdowns {
+            display: none;
+        }
     }
 }
+
+.ant-btn-primary {
+    background: $primary-color !important;
+    border-color: $primary-color !important;
+}
+
