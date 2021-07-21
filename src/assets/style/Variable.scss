@@ -1,0 +1,20 @@
+.containers {
+    max-width: 1320px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+$primary-color: #d989b0;
+$secondary-color: #fff;
+
+@mixin button-black {
+    margin: 20px 0;
+    padding: 0 30px;
+    border-radius: 0;
+    font-size: 14px;
+    color: $secondary-color;
+    background-color: black;
+    border-color: black;
+}

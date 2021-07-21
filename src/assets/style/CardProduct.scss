@@ -1,0 +1,40 @@
+@import './Variable.scss';
+
+.card {
+    width: 270px;
+    margin-bottom: 35px;
+    border: .5px solid #d3d3d3;
+    .img-card {
+        img {
+            width: 100%;
+            height: 220px;
+        }
+    }
+    .info-card {
+        padding: 15px;
+        .rate {
+            display: flex;
+            justify-content: space-between;
+            .text-price {
+                margin-top: 5px;
+                margin-bottom: 0;
+            }
+        }
+        .action-card {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            .btn-detil {
+                padding: 0 30px;
+                border-color: $primary-color;
+                color: $primary-color;
+            }
+            .btn-book {
+                padding: 0 30px;
+                background-color: #000;
+                border-color: #000;
+                color: $secondary-color;
+            }
+        }
+    }
+}

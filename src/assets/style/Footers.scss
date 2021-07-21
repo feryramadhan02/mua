@@ -1,0 +1,56 @@
+@import './Variable.scss';
+
+footer {
+    margin-top: 30px;
+    background-color: black;
+    .main-footer {
+        display: flex;
+        justify-content: space-evenly;
+        .footer-description {
+            padding: 35px;
+            .list-options {
+                list-style: none;
+                text-align: left;
+                padding: 0;
+                .options {
+                    color: $secondary-color;
+                    margin-bottom: 10px;
+                }
+                a {
+                    color: $secondary-color;
+                }
+                a:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+        .footer-social-media {
+            padding: 35px;
+            .title-sosmed {
+                color: $secondary-color;
+                margin-bottom: 10px;
+            }
+            .list-sosmed {
+                list-style: none;
+                text-align: left;
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+    }
+    .copyright-footer {
+        border-top: 1px solid #2c2c2c;
+        padding: 15px;
+        p {
+            font-size: 12spx;
+            color: $secondary-color;
+            margin: 0;
+        }
+    }
+}

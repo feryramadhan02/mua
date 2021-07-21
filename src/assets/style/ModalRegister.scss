@@ -1,0 +1,37 @@
+@import './Variable.scss';
+
+.btn-register {
+    background-color: $primary-color !important;
+    border-color: $primary-color !important;
+}
+.btn-register:hover {
+    background-color: $primary-color !important;
+    border-color: $primary-color !important;
+    color: #000 !important;
+}
+.btn-register:focus {
+    background-color: $primary-color !important;
+    border-color: $primary-color !important;
+}
+.btn-cancel-register:hover {
+    border-color: $primary-color !important;
+    color: $primary-color !important;
+}
+.btn-cancel-register:focus {
+    border-color: $primary-color !important;
+    span {
+        color: $primary-color;
+    }
+}
+.ant-input:hover {
+    border-color: $primary-color !important;
+}
+.ant-input:focus {
+    border-color: $primary-color !important;
+}
+.ant-input-password:hover {
+    border-color: $primary-color !important;
+}
+.ant-input-password:focus {
+    border-color: $primary-color !important;
+}
