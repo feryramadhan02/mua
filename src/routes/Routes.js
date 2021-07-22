@@ -1,6 +1,6 @@
 import { Suspense, useState } from "react";
 import { Route, Switch } from "react-router";
-import ProfilePage from "views/ProfilePage";
+// import ProfilePage from "views/ProfilePage";
 import MainRoutes from "./MainRoutes";
 
 const Routes = () => {
@@ -17,7 +17,7 @@ const Routes = () => {
                     <Route path="/home" exact>
                         <MainRoutes data={data} changeData={onChangeData} />
                     </Route>
-                    <Route path="/profile" component={ProfilePage} exact />
+                    {/* <Route path="/profile" component={ProfilePage} exact /> */}
                 </Switch>
             </Suspense>
         </>

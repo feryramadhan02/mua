@@ -1,5 +1,5 @@
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 500px) {
     .disp {
         .header-title {
             h2 {
@@ -10,7 +10,6 @@
             }
         }
         .nav-menu {
-            width: 35% !important;
             .main-menu {
                 display: none !important;
             }
@@ -18,7 +17,6 @@
         .dropdowns {
             display: inline-block !important;
             svg {
-                width: 20px;
                 line-height: 10px;
             }
         }
@@ -49,12 +47,15 @@
         }
         .card-wrapper {
             .card {
-                width: 335px;
+                width: 385px;
             }
         }
     }
     .promo-title {
         .base-promo {
+            .comeon {
+                margin: 20px 10px 0 10px !important;
+            }
             .btn-join {
                 margin: auto !important;
             }
